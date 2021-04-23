@@ -4,7 +4,7 @@ defmodule FriendsApp.CLI.Menu.Choice do
   alias FriendsApp.DB.CSV
 
   def all do
-    Shell.cmd("cls")
+    Shell.cmd("clear")
     Shell.info("Escolha uma opção")
 
     menu_itens = Itens.all()
@@ -45,7 +45,7 @@ defmodule FriendsApp.CLI.Menu.Choice do
   end
 
   defp invalid_option do
-    Shell.cmd("cls")
+    Shell.cmd("clear")
     Shell.error("Opção inválida")
     Shell.prompt("Pressione ENTER para tentar novamente")
     all()
@@ -59,13 +59,12 @@ defmodule FriendsApp.CLI.Menu.Choice do
   end
 
   def confirm_message(chosen_menu_item) do
-    Shell.cmd("cls")
+    Shell.cmd("clear")
     Shell.info("Você escolheu...[#{chosen_menu_item.label}")
 
-    if Shell.yes?("Confirma?") do
-      chosen_menu_item
-    else
-      all()
+    case Shell.yes?("Confirma?") do
+      true -> chosen_menu_item
+      false -> all()
     end
   end
 end

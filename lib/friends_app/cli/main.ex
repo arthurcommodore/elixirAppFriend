@@ -2,7 +2,7 @@ defmodule FriendsApp.CLI.Main do
   alias Mix.Shell.IO, as: Shell
 
   def start_app do
-    Shell.cmd("cls")
+    Shell.cmd("clear")
     welcome_message()
     Shell.prompt("Pressione ENTER para continuar...")
     starts_menu_choice()
