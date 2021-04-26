@@ -1,19 +1,23 @@
 # FriendsApp
 
-**TODO: Add description**
+**Projeto de operações básicas de CRUD, em cima manipulação de arquivo CSV*
 
-## Installation
+## Mix
+Existem duas tasks para utilizar o programa, a primeira é a start.
+`start.exs`:
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `friends_app` to your list of dependencies in `mix.exs`:
-
-```elixir
-;;;;
-end
 ```
+  $ mix start
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/friends_app](https://hexdocs.pm/friends_app).
+```
+A segunda task é para apenas cadastrar amigos aleatorios no sistema de agendamento. 
+Foi desenvolvido, pensando em facilitar os testes.
+```
+  $ mix utils.add_fake_friends
 
+```
+Em caso de duvida:
+```
+  $ mix help
 
+```
