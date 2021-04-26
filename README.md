@@ -8,10 +8,7 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
 by adding `friends_app` to your list of dependencies in `mix.exs`:
 
 ```elixir
-def deps do
-  [
-    {:friends_app, "~> 0.1.0"}
-  ]
+;;;;
 end
 ```
 
